@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'denuncias',
 ]
 
+AUTH_USER_MODEL = 'usuarios.CustomUser' # Para usar el modelo extendido creado de User
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

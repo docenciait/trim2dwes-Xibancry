@@ -1,0 +1,14 @@
+{% extends 'template/base.html' %}
+
+{% block content %}
+    <h2>Lista denuncias</h2>
+    {% for denuncia in object_list %}
+        <li>
+            <h3>{{ denuncia.titulo }}</h3>
+            <p>{{ denuncia.descripcion }}</p>
+            <p>Categoria: {{ denuncia.categoria }}</p>
+            <p>Estado: {{ denuncia.estado }}</p>
+            <p><a href="{% url 'editar_denuncia' denuncia.pk %}">Editar</a> <a href="{% url 'eliminar_denuncia' id=denuncia.id %}">Eliminar</a></p>
+        </li>
+    {% endfor %}
+{% endblock content %}

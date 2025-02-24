@@ -1,0 +1,9 @@
+{% extends 'template/base.html' %}
+
+{% block content %}
+    <h2>Editar denuncia</h2>
+    <form method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit'>Editar</button>
+{% endblock content %}
